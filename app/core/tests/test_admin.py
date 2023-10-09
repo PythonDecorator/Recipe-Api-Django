@@ -9,7 +9,7 @@ from django.test import Client
 
 
 class AdminSiteTests(TestCase):
-    """Tests for Django Admin."""
+    """Test for Django Admin."""
 
     def setUp(self):
         """Create user and client."""
@@ -27,7 +27,7 @@ class AdminSiteTests(TestCase):
         )
 
     def test_users(self):
-        """Tests that users are listed on page."""
+        """Test that users are listed on page."""
         url = reverse("admin:core_user_changelist")
         res = self.client.get(url)
 
@@ -35,14 +35,14 @@ class AdminSiteTests(TestCase):
         self.assertContains(res, self.user.email)
 
     def test_edit_user_page(self):
-        """Tests that edit user page works."""
+        """Test that edit user page works."""
         url = reverse("admin:core_user_change", args=[self.user.id])
         res = self.client.get(url)
 
         self.assertEqual(res.status_code, 200)
 
     def test_create_user_page(self):
-        """Tests that adding or creating a user works."""
+        """Test that adding or creating a user works."""
         url = reverse("admin:core_user_add")
         res = self.client.get(url)
 
