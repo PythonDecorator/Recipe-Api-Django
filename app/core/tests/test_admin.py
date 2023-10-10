@@ -1,5 +1,5 @@
 """
-Tests for Django admin modifications
+Tests for Django admin modifications.
 """
 
 from django.test import TestCase
@@ -9,7 +9,7 @@ from django.test import Client
 
 
 class AdminSiteTests(TestCase):
-    """Test for Django Admin."""
+    """Tests for Django Admin."""
 
     def setUp(self):
         """Create user and client."""
