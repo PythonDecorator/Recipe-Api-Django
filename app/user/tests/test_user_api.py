@@ -72,6 +72,8 @@ class PublicUserApiTests(TestCase):
             'password': "test-user-password",
         }
 
+        create_user(**user_details)
+
         payload = {
             'email': user_details['email'],
             'password': user_details['password'],
