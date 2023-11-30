@@ -1,5 +1,5 @@
 # Recipe-Api-Django
-Create A Recipe API with Django
+This is a RESTful API that allows users to create recipe.
 
 
 - docker-compose run --rm app sh -c "python manage.py test"
